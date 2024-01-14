@@ -38,11 +38,9 @@ impl Sandbox for Component {
 
     fn view(&self) -> Element<Message> {
         let numeric_comp1 = numeric_input(self.value, Message::NumericInputChanged);
-        let numeric_comp2 = numeric_input(self.value, Message::NumericInputChanged);
-
         let col = Column::new();
         let col = col.push(numeric_comp1);
-        let col = col.push(numeric_comp2);
+
         col.padding(20).height(Length::Fill).into()
     }
 }
