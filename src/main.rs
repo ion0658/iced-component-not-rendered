@@ -1,4 +1,4 @@
-use iced::widget::{container, Column};
+use iced::widget::Column;
 use iced::{Element, Length, Sandbox, Settings};
 
 use numeric_input::numeric_input;
@@ -104,6 +104,7 @@ mod numeric_input {
         }
 
         fn view(&self, _state: &Self::State) -> Element<Event, Renderer> {
+            println!("numeric input view called!");
             let button = |label, on_press| {
                 button(
                     text(label)
